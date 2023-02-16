@@ -12,7 +12,15 @@ def griffendor():
 
 
 @app.route("/slytherin")
-def func():
+def slytherin():
     return render_template("slytherin.html")
+
+@app.route("/ravenclaw")
+def ravenclaw():
+    return render_template("ravenclaw.html")
+
+@app.route("/hufflepuff")
+def hufflepuff():
+    return render_template("hufflepuff.html")
 
 app.run(debug=True)
