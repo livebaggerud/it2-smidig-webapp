@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{{url_for("static", filename="nav.css")}}'>
     <title></title>
 </head>
 <body>
+    <header>
+        <nav>
+            <div><a href="/">Harry Potter</a></div>
+            <div><a href="/griffendor">Griffendor</a></div>
+            <div><a href="/slytherin">Slytherin</a></div>
+            <div><a href="/huffelpuff">Hufflepuff</a></div>
+            <div><a href="/ravenclaw">Ravenclaw</a></div>
     
-    {% block innhold %}
-    <nav>
-        <div><a href="/">Haryy Potter</a></div>
-        <div><a href="/griffendor">Griffendor</a></div>
-        <div><a href="/slytherin">Slytherin</a></div>
-        <div><a href="/huffelpuff">Hufflepuff</a></div>
-        <div><a href="/ravenclaw">Ravenclaw</a></div>
-
-    </nav>
-    {% endblock %}
+        </nav>
+    </header>
+    <main>
+        {% block innhold %}
+        
+        {% endblock %}
+    </main>
 </body>
 </html>
