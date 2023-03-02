@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from info import hent_gryffindor 
 
 app = Flask(__name__)
 
@@ -8,7 +9,8 @@ def index():
 
 @app.route("/gryffindor")
 def griffendor():
-    return render_template("griffindor.html")
+    gryffendor_karakter = hent_gryffindor()
+    return render_template("griffindor.html", gryffendor_karkater = gryffendor_karakter)
 
 
 @app.route("/slytherin")

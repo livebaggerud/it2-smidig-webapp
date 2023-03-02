@@ -12,17 +12,23 @@ def hent_gryffindor():
     url = "https://hp-api.onrender.com/api/characters"
     repons = req.get(url, headers = {"User-agent":"Lives mac"})
     data = repons.json()
+    griffendor_karakter = []
     for karakter in data:
         if karakter["house"] == "Gryffindor":
-            hent_navn()
+            griffendor_karakter.append(karakter)
+    
+    return griffendor_karakter
 
 def hent_slytherin():
     url = "https://hp-api.onrender.com/api/characters"
     repons = req.get(url, headers = {"User-agent":"Lives mac"})
     data = repons.json()
+    slytherin_kar = []
     for karakter in data:
         if karakter["house"] == "Slytherin":
-            hent_navn()
+            slytherin_kar.append(karakter)
+    
+    return slytherin_kar
 
 def hent_hufflepuff():
     url = "https://hp-api.onrender.com/api/characters"

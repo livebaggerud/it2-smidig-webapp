@@ -1,5 +1,11 @@
 {% extends "mal.html" %}
 
 {% block innhold %}
+
+{%for karakter in gryffendor_karakter %}
+
+<h1>{{karakter}}</h1>
+
+{%endfor%}
     
 {% endblock %}
