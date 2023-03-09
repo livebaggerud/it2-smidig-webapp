@@ -16,7 +16,7 @@ def hent_gryffindor():
     for karakter in data:
         if karakter["house"] == "Gryffindor":
             griffendor_karakter.append(karakter)
-    
+    print(griffendor_karakter)
     return griffendor_karakter
 
 def hent_slytherin():

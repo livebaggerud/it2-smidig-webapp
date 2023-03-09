@@ -10,7 +10,7 @@ def index():
 @app.route("/gryffindor")
 def griffendor():
     gryffendor_karakter = hent_gryffindor()
-    return render_template("griffindor.html", gryffendor_karkater = gryffendor_karakter)
+    return render_template("griffindor.html", gryffendor_karakter = gryffendor_karakter)
 
 
 @app.route("/slytherin")
