@@ -1,5 +1,16 @@
 {% extends "mal.html" %}
 
 {% block innhold %}
-    
+
+<h1 class="overskirft">Disse er med i Slytherin:</h1>
+
+{%for karakter in slytherin_karakterer %}
+
+
+<h1>{{karakter['name']}}</h1>
+
+<img src="{{ karakter['image'] }}" alt="">
+
+{%endfor%}
+
 {% endblock %}

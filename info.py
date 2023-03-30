@@ -16,7 +16,6 @@ def hent_gryffindor():
     for karakter in data:
         if karakter["house"] == "Gryffindor":
             griffendor_karakter.append(karakter)
-    print(griffendor_karakter)
     return griffendor_karakter
 
 def hent_slytherin():
@@ -27,22 +26,29 @@ def hent_slytherin():
     for karakter in data:
         if karakter["house"] == "Slytherin":
             slytherin_kar.append(karakter)
-    
     return slytherin_kar
 
 def hent_hufflepuff():
     url = "https://hp-api.onrender.com/api/characters"
     repons = req.get(url, headers = {"User-agent":"Lives mac"})
     data = repons.json()
+    huffllepuff_kar =[]
     for karakter in data:
         if karakter["house"] == "Hufflepuff":
-            hent_navn()
+            huffllepuff_kar.append(karakter)
+    
+    return huffllepuff_kar
 
 def hent_ravenclaw():
     url = "https://hp-api.onrender.com/api/characters"
     repons = req.get(url, headers = {"User-agent":"Lives mac"})
     data = repons.json()
+    ravenclaw_kar = []
     for karakter in data:
         if karakter["house"] == "Ravenclaw":
-            hent_navn()
+            ravenclaw_kar.append(karakter)
+    
+    return ravenclaw_kar
+
+    
 

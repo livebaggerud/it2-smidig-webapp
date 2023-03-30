@@ -2,9 +2,13 @@
 
 {% block innhold %}
 
+<h1 class="overskirft">Disse er med i Griffendor:</h1>
+
 {%for karakter in gryffendor_karakter %}
 
-<h1>{{karakter}}</h1>
+<h1>{{karakter['name']}}</h1>
+
+<img src="{{ karakter['image'] }}" alt="">
 
 {%endfor%}
     

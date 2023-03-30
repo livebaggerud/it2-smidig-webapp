@@ -1,5 +1,8 @@
 from flask import Flask, render_template
 from info import hent_gryffindor 
+from info import hent_slytherin
+from info import hent_hufflepuff
+from info import hent_ravenclaw
 
 app = Flask(__name__)
 
@@ -15,14 +18,19 @@ def griffendor():
 
 @app.route("/slytherin")
 def slytherin():
-    return render_template("slytherin.html")
+    slytherin_karakterer = hent_slytherin()
+    return render_template("slytherin.html", slytherin_karakterer = slytherin_karakterer)
 
 @app.route("/ravenclaw")
 def ravenclaw():
-    return render_template("ravenclaw.html")
+    ravenclaw_karakterer = hent_ravenclaw()
+    print(ravenclaw_karakterer)
+    return render_template("ravenclaw.html", ravenclaw_karakterer = ravenclaw_karakterer)
+
 
 @app.route("/hufflepuff")
 def hufflepuff():
-    return render_template("hufflepuff.html")
+    hufflepuff_karakterer = hent_hufflepuff()
+    return render_template("hufflepuff.html", hufflepuff_karakterer = hufflepuff_karakterer)
 
 app.run(debug=True)
